@@ -1,0 +1,48 @@
+#overallWrapper {
+    text-align: center;
+    font-family: Quicksand, sans-serif;
+    width: 100%;
+}
+
+#gingerWrap {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+#dashes {
+    width: 60%;
+    margin: 1em;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#wordSpace {
+    margin: 0 auto;
+    font-size: 2.9em;
+    text-align: center;
+    color: darkslategray;
+}
+
+#startButton {
+    cursor: pointer;
+    border: 1px solid gray;
+    padding: 0.5em 2em;
+    font-size: 1.5em;
+    border-radius: 25px;
+}
+
+#alphabetKeys {
+    align-content: center;
+    width: 85%;
+    font-size: 3em;
+    color: darkslategray;
+}
+
+#alphabetKeys span {
+    cursor: pointer;
+    padding: 0.15em;
+}
