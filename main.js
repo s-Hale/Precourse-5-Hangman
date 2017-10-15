@@ -6,6 +6,8 @@ $(document).ready(function() {
     var guesses = [];
     var userLetter = "";
     var checkWordSplit = [];
+    var counter = 0;
+    var gingerbreads = [$("#ging1"), $("#ging2"), $("#ging3"), $("#ging4")];
 
     //generate an array of underscores of the right length
 
@@ -30,9 +32,25 @@ $(document).ready(function() {
                 result = true;
                 guesses[i] = userLetter;
                 $("#wordSpace").html(guesses);
-
+                if (guesses.join("") === chosenWord) {
+                    $("#wordSpace").addClass("aWinnerIsYou");
+                }
             }
         }
+
+        //cycle through the gingerbreads until they vanish. Reinstate noClick when final one is gone.
+
+        if (!result) {
+            gingerbreads[counter].addClass("hidden");
+            counter++;
+            if (counter < gingerbreads.length) {
+                gingerbreads[counter].removeClass("hidden");
+            } else {
+                $("#alphabetKeys").addClass("noClick");
+                $("#wordSpace").hide().html(chosenWord).fadeIn(1600);
+            }
+        }
+        return result;
     }
 
 
